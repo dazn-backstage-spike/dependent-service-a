@@ -1,0 +1,12 @@
+dazn-manifest: 3.0.0
+owner: fake@test.com
+services:
+- name: dependent-service-a
+  application-tags:
+  - ""
+  dependencies:
+  - service: dependent-service-b
+    type: requests-to
+  security:
+    risk-owner: fake@test.com
+    risk-tier: Low
